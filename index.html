@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Entenda a infraestrutura da inteligência artificial e compare seus hábitos de uso com a calculadora didática do EcoCompute.">
+  <meta name="theme-color" content="#101411">
+  <title>EcoCompute — O impacto físico da inteligência artificial</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/simulacao.js" defer></script>
+  <script src="js/interface.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#inicio">Pular para o conteúdo</a>
+  <header class="topo">
+    <nav class="container navegacao" aria-label="Navegação principal">
+      <a class="marca" href="#inicio"><span class="marca-icone" aria-hidden="true"></span>Eco<span>Compute</span></a>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#infraestrutura">Infraestrutura</a></li>
+        <li><a href="#agua">Água</a></li>
+        <li><a href="#empresas">Empresas</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+        <li><a href="#fontes">Fontes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="abertura" id="inicio" tabindex="-1">
+      <div class="container abertura-conteudo">
+        <div>
+          <p class="rotulo">Inteligência artificial e meio ambiente</p>
+          <h1>A nuvem não é <em>imaterial.</em></h1>
+          <p class="introducao">Toda interação com inteligência artificial possui uma pegada física. Descubra a infraestrutura, os recursos e os custos ambientais por trás dessa tecnologia.</p>
+          <div class="acoes">
+            <a class="botao" href="#infraestrutura">Explorar o conteúdo</a>
+            <a class="botao secundario" href="#calculadora">Acessar a calculadora</a>
+          </div>
+        </div>
+        <figure class="foto foto-abertura">
+          <img src="assets/images/servidores.webp" width="1600" height="1067" alt="Fileiras de racks de servidores no centro de computação do CERN">
+          <figcaption>Centro de computação do CERN · Florian Hirzinger</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="infraestrutura" tabindex="-1">
+      <div class="container">
+        <p class="rotulo">Infraestrutura</p>
+        <h2>O que acontece quando você pergunta à IA?</h2>
+        <p class="introducao">Da tela ao data center, uma solicitação aciona computadores, redes e sistemas de refrigeração. Selecione uma etapa para explorar o percurso.</p>
+        <div class="diagrama" role="group" aria-label="Etapas do processamento">
+          <button type="button" data-etapa="0" aria-controls="explicacao" aria-pressed="true"><span>01</span>Solicitação</button>
+          <button type="button" data-etapa="1" aria-controls="explicacao" aria-pressed="false"><span>02</span>Processamento</button>
+          <button type="button" data-etapa="2" aria-controls="explicacao" aria-pressed="false"><span>03</span>Energia elétrica</button>
+          <button type="button" data-etapa="3" aria-controls="explicacao" aria-pressed="false"><span>04</span>Calor e refrigeração</button>
+        </div>
+        <div class="explicacao" id="explicacao" aria-live="polite">
+          <h3 id="etapa-titulo">A solicitação sai do seu dispositivo</h3>
+          <p id="etapa-texto">Ao enviar uma pergunta a um serviço de IA on-line, seu dispositivo transmite os dados pela internet a um data center, uma instalação que reúne servidores, equipamentos de rede, alimentação elétrica e refrigeração.</p>
+        </div>
+        <p class="credito"><a href="https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai">Fonte: Agência Internacional de Energia</a></p>
+      </div>
+    </section>
+
+    <section class="faixa" id="agua" tabindex="-1">
+      <div class="container">
+        <p class="rotulo">Refrigeração e água</p>
+        <h2>Para onde vai a água?</h2>
+        <p class="introducao">Os servidores liberam calor enquanto operam. A instalação precisa transportar esse calor para fora, e a forma de fazer isso afeta o uso de água e eletricidade.</p>
+        <div class="comparacao-agua">
+          <article>
+            <h3>Refrigeração a ar</h3>
+            <p>Ventiladores fazem o ar passar pelos equipamentos e levar o calor para longe. Ventilação e, quando necessário, compressores usam eletricidade. Um sistema que rejeita o calor por via seca pode operar sem evaporar água no local.</p>
+          </article>
+          <article>
+            <h3>Refrigeração evaporativa</h3>
+            <p>Ao evaporar, a água absorve calor. Em condições favoráveis, essa técnica pode reduzir a demanda de refrigeração mecânica e economizar eletricidade. A água evaporada precisa ser reposta.</p>
+          </article>
+        </div>
+        <p>Na <strong>refrigeração líquida direta ao chip</strong>, um fluido circula por placas em contato térmico com os processadores. O calor ainda precisa sair da instalação, e esse último passo pode ou não recorrer à evaporação.</p>
+        <dl class="distincao">
+          <div><dt>Uso direto</dt><dd>Água usada dentro do data center, por exemplo, em uma torre evaporativa.</dd></div>
+          <div><dt>Uso indireto</dt><dd>Água associada à geração da eletricidade que abastece a instalação, por exemplo, no resfriamento de algumas usinas.</dd></div>
+        </dl>
+        <p>O balanço depende do clima, do projeto, da disponibilidade de água e da matriz elétrica da região.</p>
+        <p class="credito"><a href="https://escholarship.org/uc/item/32d6m0d1">Fonte: relatório do Lawrence Berkeley National Laboratory</a></p>
+      </div>
+    </section>
+
+    <section id="empresas" tabindex="-1">
+      <div class="container">
+        <p class="rotulo">Empresas de IA</p>
+        <h2>Nem toda infraestrutura de IA é igual.</h2>
+        <p class="introducao">OpenAI, Google e Microsoft divulgam informações sobre seus projetos em recortes diferentes. Uma instalação ajuda a entender as escolhas locais; os relatórios corporativos descrevem operações mais amplas.</p>
+        <div class="editorial">
+          <figure class="foto foto-editorial">
+            <img src="assets/images/infraestrutura.webp" width="960" height="720" alt="Vista elevada de racks de servidores no centro de computação do CERN" loading="lazy">
+            <figcaption>Infraestrutura ilustrativa no CERN · Srnec media</figcaption>
+          </figure>
+          <div>
+            <article class="empresa">
+              <h3>OpenAI</h3>
+              <p>Expande a capacidade computacional com parceiros, como a Oracle no projeto Stargate. Em Abilene, no Texas, a OpenAI descreve refrigeração em circuito fechado e planejamento de energia com parceiros locais. As fontes consultadas não informam o consumo total de água nem o uso anual de eletricidade da unidade.</p>
+              <a href="https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/">Infraestrutura e projeto de Abilene</a>
+            </article>
+            <article class="empresa">
+              <h3>Google</h3>
+              <p>Opera uma rede global de centros de dados para seus serviços e para a nuvem. Em The Dalles, no Oregon, usa refrigeração com água e avalia os riscos da bacia hidrográfica. O relatório ambiental apresenta dados de água por instalação e indicadores de energia no escopo corporativo, que inclui atividades além da IA.</p>
+              <a href="https://sustainability.google/google-2026-environmental-report/">Relatório ambiental de 2026</a>
+            </article>
+            <article class="empresa">
+              <h3>Microsoft</h3>
+              <p>Opera infraestrutura de nuvem e IA que sustenta o Azure. Mount Pleasant, em Wisconsin, foi anunciado para testar um projeto de refrigeração de chips sem evaporação de água. A Microsoft publica indicadores de eficiência de energia e água para instalações próprias elegíveis. Esses indicadores agregados não medem o consumo da unidade de Mount Pleasant.</p>
+              <a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/">Projeto de refrigeração</a> · <a href="https://datacenters.microsoft.com/sustainability/efficiency/">Indicadores da frota</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faixa" id="calculadora" tabindex="-1">
+      <div class="container">
+        <p class="rotulo">Calculadora didática</p>
+        <h2>Sua inteligência artificial, seu impacto.</h2>
+        <p class="introducao">Compare seu padrão de uso com quatro perfis fictícios. O índice EcoCompute expressa carga computacional relativa em uma escala ilustrativa, sem equivalência em energia ou água.</p>
+        <div class="simulador">
+          <form id="formulario" novalidate>
+            <h3>Seu padrão de uso</h3>
+            <label for="frequencia">Interações por dia</label>
+            <input id="frequencia" name="frequencia" type="number" min="1" max="1000000" step="1" inputmode="numeric" required aria-describedby="ajuda-frequencia erro" placeholder="Ex.: 25">
+            <small id="ajuda-frequencia">Informe um número inteiro de 1 a 1.000.000.</small>
+            <label for="complexidade">Complexidade das tarefas</label>
+            <select id="complexidade" name="complexidade">
+              <option value="simples">Simples</option>
+              <option value="variada" selected>Variada</option>
+              <option value="complexa">Complexa</option>
+            </select>
+            <label for="periodo">Período</label>
+            <select id="periodo" name="periodo">
+              <option value="semana">Semana</option>
+              <option value="mes" selected>Mês</option>
+              <option value="ano">Ano</option>
+            </select>
+            <p id="erro" class="erro" role="alert" hidden></p>
+            <button class="botao" type="submit">Calcular meu índice</button>
+          </form>
+          <div class="painel">
+            <div id="estado-inicial">
+              <h3>Comparação de perfis</h3>
+              <p>Preencha o formulário para ver como seu índice se compara aos perfis abaixo.</p>
+            </div>
+            <div id="resultado" hidden>
+              <h3 id="resultado-titulo" tabindex="-1">Resultado da simulação</h3>
+              <dl class="indicadores">
+                <div><dt>Interações por dia</dt><dd id="saida-frequencia"></dd></div>
+                <div><dt>Interações no período</dt><dd id="saida-total"></dd></div>
+                <div><dt>Complexidade</dt><dd id="saida-complexidade"></dd></div>
+                <div><dt>Índice EcoCompute</dt><dd id="saida-indice"></dd></div>
+              </dl>
+              <figure class="grafico">
+                <figcaption id="grafico-titulo"></figcaption>
+                <ul id="barras" aria-labelledby="grafico-titulo"></ul>
+              </figure>
+              <p id="interpretacao"></p>
+            </div>
+          </div>
+        </div>
+        <details class="perfis" open>
+          <summary>Conheça os quatro perfis fictícios</summary>
+          <ul id="lista-perfis"></ul>
+        </details>
+        <noscript><p>Ative o JavaScript para usar a calculadora e explorar o diagrama.</p></noscript>
+      </div>
+    </section>
+
+    <section id="fontes" tabindex="-1">
+      <div class="container metodologia">
+        <div>
+          <p class="rotulo">Metodologia e fontes</p>
+          <h2>O que sabemos e o que ainda não sabemos.</h2>
+          <p>Os perfis foram criados para representar padrões diferentes de frequência e complexidade. Suas proporções e frequências são escolhas didáticas, sem origem em médias estatísticas.</p>
+          <p class="formula">Índice do período = interações por dia × dias × carga média</p>
+          <p>A carga média soma as proporções de cada tipo de tarefa multiplicadas pelos pesos 1, 2 e 4. Semana, mês e ano correspondem a 7, 30 e 365 dias.</p>
+          <div class="tabela">
+            <table>
+              <caption>Distribuições usadas no formulário</caption>
+              <thead><tr><th scope="col">Opção</th><th scope="col">Simples</th><th scope="col">Moderadas</th><th scope="col">Complexas</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Simples</th><td>80%</td><td>15%</td><td>5%</td></tr>
+                <tr><th scope="row">Variada</th><td>40%</td><td>40%</td><td>20%</td></tr>
+                <tr><th scope="row">Complexa</th><td>15%</td><td>35%</td><td>50%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>O gasto físico de uma solicitação depende do modelo, do tamanho da resposta, dos equipamentos, da forma como os servidores compartilham recursos e do local de operação. O clima, o sistema de refrigeração e a matriz elétrica também influenciam o impacto. Os pesos do índice permitem comparar hábitos em sala de aula. Para medir energia ou água, seriam necessários dados operacionais e uma metodologia própria.</p>
+        </div>
+        <aside aria-labelledby="referencias">
+          <h3 id="referencias">Fontes para consultar</h3>
+          <ul class="fontes">
+            <li><a href="https://www.iea.org/reports/energy-and-ai">AIE · Energia e IA</a><span>Demanda elétrica e infraestrutura de data centers.</span></li>
+            <li><a href="https://escholarship.org/uc/item/32d6m0d1">Berkeley Lab · Relatório de 2024</a><span>Eletricidade, refrigeração e consumo direto e indireto de água.</span></li>
+            <li><a href="https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/">OpenAI · Infraestrutura do Stargate</a><span>Parcerias e escolhas locais de refrigeração.</span></li>
+            <li><a href="https://sustainability.google/google-2026-environmental-report/">Google · Relatório ambiental de 2026</a><span>Dados corporativos e uso de água por localização.</span></li>
+            <li><a href="https://datacenters.microsoft.com/sustainability/efficiency/">Microsoft · Eficiência em data centers</a><span>Indicadores e escopo de divulgação.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container rodape">
+      <a class="marca" href="#inicio"><span class="marca-icone" aria-hidden="true"></span>Eco<span>Compute</span></a>
+      <p>Projeto acadêmico · Internet e Sociedade</p>
+      <p class="credito"><a href="https://commons.wikimedia.org/wiki/File:CERN_Server.jpg">Foto da abertura</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>) · <a href="https://commons.wikimedia.org/wiki/File:Rack_of_Worldwide_LHC_Computing_Grid.jpg">Foto da seção Empresas</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) · Imagens redimensionadas.</p>
+    </div>
+  </footer>
+</body>
+</html>
